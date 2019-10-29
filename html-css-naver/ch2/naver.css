@@ -1,0 +1,52 @@
+/*선택자(selector)*/
+
+div#header-center {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+/* 자식 태그 */
+#header-search > h1 {
+    width: 280px;
+    display: inline-block;
+}
+
+/* 자손 태그 */
+#header-center h2{
+    display: none;
+}
+
+/* class 속성 */
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+#header-search fieldset {
+    width: 520px;
+    display: inline-block;
+}
+
+/* 자손 태그 */
+/*
+#header-center h1 {
+    width: 280px;
+}*/
+
+/* div 태그 생략 */
+/*
+#header-center {
+    margin: 0 auto;
+    width: 1080px;
+}*/
+
+/* div 태그 중복 설정 */
+/*
+#header-center, else-tag {
+    margin: 0 auto;
+    width: 1080px;
+}*/
