@@ -1,3 +1,9 @@
+/*  에스터 리스크
+    모든 태그를 의미
+*/ {
+    box-sizing: border-box;
+}
+
 /*선택자(selector)*/
 
 div#header-center {
@@ -6,9 +12,24 @@ div#header-center {
 }
 
 /* 자식 태그 */
-#header-search > h1 {
-    width: 280px;
+#header-search > a {
+    width: 198px;
+    height: 48px;
     display: inline-block;
+
+    /* 이미지 스프라이트 */
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
+    /* 위치 조정 */
+    background-position: -4px -4px;
+    /* 이미지 중복 제거 */
+    background-repeat: no-repeat;
+    /* 글자 들여쓰기 */
+    text-indent: 100%;
+    /* 공간 바깥으로 나간 것 숨기기 */
+    overflow: hidden;
+
+    position: relative;
+    top: 33px;
 }
 
 /* 자손 태그 */
@@ -17,6 +38,7 @@ div#header-center {
 }
 
 /* class 속성 */
+/* 웹 접근성을 고려한 none display */
 .blind {
     position: absolute;
     overflow: hidden;
@@ -27,7 +49,51 @@ div#header-center {
 }
 
 #header-search fieldset {
-    width: 520px;
+    /*margin-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 0px;*/
+    /* 위 오른쪽 아래쪽 왼쪽 */
+    margin : 12px 0px 12px 20px;
+    border:  2px solid #03cf5d;
+    width: 521px;
+    height: 49px;
+    display: inline-block;
+
+    /* 박스 기준 바꾸기 */
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+#header-search fieldset input {
+    border: none;
+    margin: 6px;
+    outline: none;
+    width: 405px;
+    height: 23px;
+    vertical-align: top;
+}
+
+#header-search fieldset button {
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+
+    /* 포지션 사용법 */
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
+
+#search-image {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
+    background-position: -4px -60px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
     display: inline-block;
 }
 
