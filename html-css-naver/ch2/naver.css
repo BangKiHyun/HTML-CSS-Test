@@ -1,12 +1,14 @@
 /*  에스터 리스크
     모든 태그를 의미
-*/ {
-    box-sizing: border-box;
+*/
+{
+    box-sizing: border-box
+;
 }
 
 /*선택자(selector)*/
 
-div#header-center {
+.center-align {
     margin: 0 auto;
     width: 1080px;
 }
@@ -33,9 +35,22 @@ div#header-center {
 }
 
 /* 자손 태그 */
-#header-center h2{
+#header-center h2 {
     display: none;
 }
+
+/* position fixed 예제 */
+/*
+#fixed {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border : 1px solid black;
+    border-radius: 50px;
+}*/
 
 /* class 속성 */
 /* 웹 접근성을 고려한 none display */
@@ -54,8 +69,8 @@ div#header-center {
     margin-bottom: 12px;
     margin-right: 0px;*/
     /* 위 오른쪽 아래쪽 왼쪽 */
-    margin : 12px 0px 12px 20px;
-    border:  2px solid #03cf5d;
+    margin: 12px 0px 12px 20px;
+    border: 2px solid #03cf5d;
     width: 521px;
     height: 49px;
     display: inline-block;
@@ -95,6 +110,67 @@ div#header-center {
     width: 21px;
     height: 21px;
     display: inline-block;
+}
+
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+/* 반복적인 부분 뽑아내기 */
+#nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+    background-repeat: no-repeat;
+    margin-left: 14px;
+}
+
+/* 셀렉션 */
+#nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+
+    /* 공통부분에서 제외시키는 방법 */
+    /* 덮어 씌우기 */
+    margin-left: 0px;
+}
+
+/* 두번째 자식부터는 nth-child() 가로안에 숫자 적어주면 됨 */
+#nav li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+#nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+#nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;;
+}
+
+#nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+#nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
+}
+
+#nav li:nth-child(7) span:first-child {
+    margin-top: -1px;
+    width: 32px;
+    background-position: -125px -130px;
 }
 
 /* 자손 태그 */
